@@ -17,7 +17,10 @@ public class JwtUserFactory {
 
 	//Método que gera o JwtUser com base nos dados de um usuário
 	public static JwtUser create(User user) {
-		return new JwtUser(user.getId(), user.getEmail(), user.getPassword(),
+		return new JwtUser(
+				user.getId(), 
+				user.getEmail(), 
+				user.getPassword(),
 				mapToGrantedAuthorities(user.getProfile()));
 	}
 
